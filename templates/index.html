@@ -1,100 +1,196 @@
-{% extends ""%}
+{% extends "layout.html" %}
 
-  <section class="sectionBox">
-    <div class="container">
-      <div class="row">
-        <div class='col-md-offset-2 col-md-8 text-center'>
-          <h2>Testimonial</h2>
+{% block main %}
+<section id="banner">
+    <!-- Slider -->
+    <div id="main-slider" class="flexslider">
+        <input type="radio" name="flexslider" id="slider1" checked>
+        <input type="radio" name="flexslider" id="slider2">
+        <ul class="slides">
+            <li>
+                <img src="{{ url_for('static', filename='img/slides/1.jpg') }}" alt="" />
+                <div class="flex-caption container">
+                    <h3>Smart Learning..</h3>
+                    <p>Doloribus omnis minus temporibus perferendis ipsa<br /> architecto non, magni quam</p>
+                    <a href="#" class="btn btn-theme">Read More</a>
+                </div>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='img/slides/2.jpg') }}" alt="" />
+                <div class="flex-caption container">
+                    <h3>Best Educational Campus..</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing<br /> elitincidunt eius magni
+                        provident.</p>
+                    <a href="#" class="btn btn-theme">Read More</a>
+                </div>
+            </li>
+        </ul>
+        <div class="radio-label">
+            <label for="slider1"></label>
+            <label for="slider2"></label>
         </div>
-      </div>
-      <div class='row'>
-        <div class='col-md-offset-2 col-md-8'>
-          <div class="carousel slide" data-ride="carousel" id="quote-carousel">
-            <!-- Bottom Carousel Indicators -->
-            <ol class="carousel-indicators">
-              <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
-              <li data-target="#quote-carousel" data-slide-to="1"></li>
-              <li data-target="#quote-carousel" data-slide-to="2"></li>
-            </ol>
+    </div>
+    <!-- end slider -->
+</section>
 
-            <!-- Carousel Slides / Quotes -->
-            <div class="carousel-inner">
-
-              <!-- Quote 1 -->
-              <div class="item active">
-                <blockquote>
-                  <div class="row">
-                    <div class="col-sm-3 text-center"> <img class="img-circle" src="assets/images/person_1.png"
-                        style="width: 100px;height:100px;"> </div>
-                    <div class="col-sm-9">
-                      <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit!
-                      </p>
-                      <small>Someone famous</small>
-                    </div>
-                  </div>
-                </blockquote>
-              </div>
-              <!-- Quote 2 -->
-              <div class="item">
-                <blockquote>
-                  <div class="row">
-                    <div class="col-sm-3 text-center"> <img class="img-circle" src="assets/images/person_2.png"
-                        style="width: 100px;height:100px;"> </div>
-                    <div class="col-sm-9">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor nec lacus ut tempor.
-                        Mauris.</p>
-                      <small>Someone famous</small>
-                    </div>
-                  </div>
-                </blockquote>
-              </div>
-              <!-- Quote 3 -->
-              <div class="item">
-                <blockquote>
-                  <div class="row">
-                    <div class="col-sm-3 text-center"> <img class="img-circle" src="assets/images/person_3.png"
-                        style="width: 100px;height:100px;"> </div>
-                    <div class="col-sm-9">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit in arcu blandit, eget
-                        pretium nisl accumsan. Sed ultricies commodo tortor, eu pretium mauris.</p>
-                      <small>Someone famous</small>
-                    </div>
-                  </div>
-                </blockquote>
-              </div>
+<section class="txt-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="aligncenter">
+                    <h1 class="aligncenter">Шкільні предмети</h1>
+                    <p>Шкільні предмети є основою освіти, допомагаючи учням розвивати різноманітні навички та знання, необхідні для майбутнього життя. Вони охоплюють широкий спектр тем: від математики та природничих наук до літератури та мистецтва, надаючи можливість кожному учню знайти те, що його захоплює.</p>
+                    <p>Математика розвиває логічне мислення і вміння вирішувати проблеми, тоді як природничі науки допомагають розуміти світ навколо нас. Література сприяє розвитку критичного мислення та творчих здібностей, а мистецтво і музика дають можливість виразити себе. Шкільні предмети формують всебічно розвинену особистість, відкриваючи двері до нових можливостей і цікавих захоплень.</p>
+                </div>
             </div>
+        </div>
+    </div>
+</section>
 
-            <!-- Carousel Buttons Next/Prev -->
-            <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i
-                class="fa fa-chevron-left"></i></a> <a data-slide="next" href="#quote-carousel"
-              class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="sectionBox">
+<section id="content">
     <div class="container">
-      <div class="heading">
-        <!-- Heading -->
-        <h2>About the Company</h2>
-        <br />
-      </div>
-      <div class="row">
-        <div class="col-md-4"> <img src="assets/images/spotlight.jpeg" alt="" class="img-responsive"> </div>
-        <div class="col-md-8">
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-            aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
-            dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-            sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
-            magnam aliquam quaerat voluptatem. </p>
-          <blockquote class="blockquote-1">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Anim pariatur
-              cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid</p>
-            <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
-          </blockquote>
+        <div class="row">
+            <div class="features">
+                <div class="col-md-4 col-sm-6 wow fadeInUp animated" data-wow-duration="300ms"
+                    data-wow-delay="0ms">
+                    <div class="media service-box">
+                        <div class="pull-left">
+                            <i class="fa fa-leanpub"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Математика</h4>
+                            <p>Backed by some of the biggest names in the industry, Firefox OS is an open
+                                platform that fosters greater</p>
+                        </div>
+                    </div>
+                </div><!--/.col-md-4-->
+
+                <div class="col-md-4 col-sm-6 wow fadeInUp animated" data-wow-duration="300ms"
+                    data-wow-delay="100ms">
+                    <div class="media service-box">
+                        <div class="pull-left">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Teacher Info</h4>
+                            <p>Backed by some of the biggest names in the industry, Firefox OS is an open
+                                platform that fosters greater</p>
+                        </div>
+                    </div>
+                </div><!--/.col-md-4-->
+
+                <div class="col-md-4 col-sm-6 wow fadeInUp animated" data-wow-duration="300ms"
+                    data-wow-delay="200ms">
+                    <div class="media service-box">
+                        <div class="pull-left">
+                            <i class="fa fa-trophy"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Our Campus</h4>
+                            <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod
+                                massa, eu eleifend ipsum.</p>
+                        </div>
+                    </div>
+                </div><!--/.col-md-4-->
+
+                <div class="col-md-4 col-sm-6 wow fadeInUp animated" data-wow-duration="300ms"
+                    data-wow-delay="300ms">
+                    <div class="media service-box">
+                        <div class="pull-left">
+                            <i class="fa fa-user-plus"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">External Activities</h4>
+                            <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod
+                                massa, eu eleifend ipsum.</p>
+                        </div>
+                    </div>
+                </div><!--/.col-md-4-->
+
+                <div class="col-md-4 col-sm-6 wow fadeInUp animated" data-wow-duration="300ms"
+                    data-wow-delay="400ms">
+                    <div class="media service-box">
+                        <div class="pull-left">
+                            <i class="fa fa-newspaper-o"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Sports</h4>
+                            <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod
+                                massa, eu eleifend ipsum.</p>
+                        </div>
+                    </div>
+                </div><!--/.col-md-4-->
+
+                <div class="col-md-4 col-sm-6 wow fadeInUp animated" data-wow-duration="300ms"
+                    data-wow-delay="500ms">
+                    <div class="media service-box">
+                        <div class="pull-left">
+                            <i class="fa fa-cubes"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Development</h4>
+                            <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod
+                                massa, eu eleifend ipsum.</p>
+                        </div>
+                    </div>
+                </div><!--/.col-md-4-->
+            </div>
         </div>
-      </div>
     </div>
-  </section>
+</section>
+
+<section id='events'>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="aligncenter">
+                    <h2 class="aligncenter">Наші події</h2>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis
+                    minus temporibus perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti
+                    consequuntur possimus.
+                </div>
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="post3">
+                    <img src="img/e1.png" alt="">
+                    <a href="#">
+                        <time datetime="2015-03-01">
+                            <span class="year">2015</span>
+                            <span class="month">Feb</span>
+                        </time>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipis.</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="post3">
+                    <img src="img/e2.png" alt="">
+                    <a href="#">
+                        <time datetime="2015-03-01">
+                            <span class="year">2015</span>
+                            <span class="month">March</span>
+                        </time>
+                        <p>Apsum dolor sit amet, consectetur adipisdslif.</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="post3">
+                    <img src="img/e3.png" alt="">
+                    <a href="#">
+                        <time datetime="2015-03-01">
+                            <span class="year">2015</span>
+                            <span class="month">April</span>
+                        </time>
+                        <p>Dolor sit amet, consectetur adipisic indfeft</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
