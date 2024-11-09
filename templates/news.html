@@ -14,7 +14,7 @@
     <div class="container content">
         <!-- Service Blcoks -->
         <div class="row service-v1 margin-bottom-40">
-            {% for item in news_items.items %}
+            {% for item in list_news %}
             <div class="col-md-4 md-margin-bottom-40">
                 <img class="img-responsive" src="{{ item.image}}" alt="">
                 <h2>{{ item.name }}</h2>
@@ -28,37 +28,6 @@
                 <div class="col-md-12"><hr></div>
             {% endif %}
             {% endfor %}
-        </div>
-        <div class="row">
-            <nav aria-label="Page navigation">
-                <ul class="pagination">
-                    {% if news_items.has_prev %}
-                    <li>
-                        <a href="{{ url_for('news', page=news_items.prev_num) }}" aria-label="Попередня">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
-                    {% endif %}
-
-                    {% for page_num in news_items.iter_pages() %}
-                    {% if page_num %}
-                        <li><a href="{{ url_for('news', page=page_num) }}"
-                        class="{{ 'active' if page_num == news_items.page else '' }}">{{ page_num }}</a></li>
-                    {% else %}
-                    <span>...</span>
-                    {% endif %}
-                    {% endfor %}
-
-
-                    {% if news_items.has_next %}
-                    <li>
-                        <a href="{{ url_for('news', page=news_items.next_num) }}" aria-label="Наступна">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
-                    {% endif %}
-                </ul>
-            </nav>
         </div>
     </div>
 </section>
